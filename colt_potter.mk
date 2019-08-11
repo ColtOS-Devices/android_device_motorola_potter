@@ -20,6 +20,7 @@ $(call inherit-product, device/motorola/potter/full_potter.mk)
 
 # Inherit some common ColtOS stuff.
 $(call inherit-product, vendor/colt/common.mk)
+$(call inherit-product, packages/apps/ColtApps/common.mk)
 
 # Boot animation
 TARGET_BOOT_ANIMATION_RES := 1080x1920
@@ -34,3 +35,7 @@ PRODUCT_SYSTEM_PROPERTY_BLACKLIST := ro.product.model
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_NAME="Moto G5 Plus"
+
+# Maintainer Prop
+PRODUCT_PROPERTY_OVERRIDES += \
+	ro.colt.maintainer=anishpratheepan
